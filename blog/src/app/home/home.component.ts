@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { DataService } from '../_services/data.service';
 
 @Component({
   selector: 'home',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public items$: any;
 
-  constructor() { }
+  constructor(private service: DataService) {}
 
   ngOnInit() {
   }
