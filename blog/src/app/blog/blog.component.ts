@@ -18,6 +18,7 @@ export class BlogComponent implements OnInit {
 
   getAll() {
     this.service.getAll().subscribe(response => {
+      console.log(response);
       this.items$ = response;
     });
   }
